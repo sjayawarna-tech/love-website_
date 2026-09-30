@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samadhi ♡</title>
+<meta name="theme-color" content="#ffe4ed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Noto+Serif+Sinhala:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-scene="0">
+
+<!-- Fixed background layers: cross-fade as you scroll (see data-scene on each section) -->
+<div class="bg" aria-hidden="true">
+  <i class="L L0"></i><i class="L L1"></i><i class="L L2"></i><i class="L L3"></i>
+  <i class="L L4"></i><i class="L L5"></i><i class="L L6"></i>
+</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- Floating glass navigation (bottom on mobile) -->
+<nav class="dock glass" aria-label="Menu">
+  <a href="#home" data-n="home"><b>⌂</b><span>Home</span></a>
+  <a href="#letter" data-n="letter"><b>✉</b><span>Letter</span></a>
+  <a href="#memories" data-n="memories"><b>❀</b><span>Memories</span></a>
+  <a href="#games" data-n="games"><b>✦</b><span>Games</span></a>
+  <a href="#surprise" data-n="surprise"><b>♡</b><span>Surprise</span></a>
+</nav>
+
+<main>
+<!-- 1 · HERO (graphics only, no photo) -->
+<section id="home" class="hero" data-scene="0" data-nav="home">
+  <!-- Pure-graphics hero: soft light orbs, glowing heart emblem, butterflies -->
+  <div class="hero-bg"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><span class="beam"></span></div>
+
+  <svg class="bfly b1" viewBox="0 0 60 50" aria-hidden="true"><g class="wl"><path d="M30 24C20 4 4 4 3 16c-1 10 12 14 27 8z" fill="#f9c9da"/><path d="M30 27C18 30 8 40 16 46c8 4 14-8 14-19z" fill="#dccdf3"/></g><g class="wr"><path d="M30 24C40 4 56 4 57 16c1 10-12 14-27 8z" fill="#f9c9da"/><path d="M30 27c12 3 22 13 14 19-8 4-14-8-14-19z" fill="#dccdf3"/></g><path d="M30 18v26" stroke="#b04a76" stroke-width="2.5" stroke-linecap="round"/></svg>
+  <svg class="bfly b2" viewBox="0 0 60 50" aria-hidden="true"><g class="wl"><path d="M30 24C20 4 4 4 3 16c-1 10 12 14 27 8z" fill="#e9c680"/><path d="M30 27C18 30 8 40 16 46c8 4 14-8 14-19z" fill="#f9c9da"/></g><g class="wr"><path d="M30 24C40 4 56 4 57 16c1 10-12 14-27 8z" fill="#e9c680"/><path d="M30 27c12 3 22 13 14 19-8 4-14-8-14-19z" fill="#f9c9da"/></g><path d="M30 18v26" stroke="#b04a76" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+  <div class="hero-in">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="-125 -125 250 250">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd3e2"/><stop offset=".55" stop-color="#e58fae"/><stop offset="1" stop-color="#c25b86"/></linearGradient>
+          <radialGradient id="hglow"><stop offset="0" stop-color="#ff9fc2" stop-opacity=".75"/><stop offset="1" stop-color="#ff9fc2" stop-opacity="0"/></radialGradient>
+          <path id="hp" d="M0 62C-92 -6 -72 -72 -36 -64C-16 -60 0 -42 0 -33C0 -42 16 -60 36 -64C72 -72 92 -6 0 62Z"/>
+        </defs>
+        <circle r="120" fill="url(#hglow)" class="halo"/>
+        <g class="orbit o-a"><circle class="ring" r="112"/><path class="sp" d="M112 -8Q112 0 120 0Q112 0 112 8Q112 0 104 0Q112 0 112 -8Z"/><circle cx="-112" cy="0" r="3" fill="#e9c680"/></g>
+        <g class="orbit o-b"><circle class="ring r2" r="96"/><circle cx="0" cy="-96" r="3.5" fill="#fff"/><path class="sp g" d="M0 100Q0 108 8 108Q0 108 0 116Q0 108 -8 108Q0 108 0 100Z"/></g>
+        <g class="beat"><use href="#hp" fill="url(#hg)"/>
+          <use href="#hp" class="ln l1" transform="scale(.78)"/><use href="#hp" class="ln l2" transform="scale(.56)"/><use href="#hp" class="ln l3" transform="scale(.34)"/>
+          <path d="M-52 -30C-46 -48 -30 -52 -18 -48" class="shine"/></g>
+      </svg>
+    </div>
+    <h1 aria-label="Samadhi"><span style="--i:0">S</span><span style="--i:1">a</span><span style="--i:2">m</span><span style="--i:3">a</span><span style="--i:4">d</span><span style="--i:5">h</span><span style="--i:6">i</span> <svg class="hh" viewBox="0 0 24 22"><use href="#heart"/></svg></h1>
+    <span class="flourish"></span>
+    <p class="sin big">මගෙ චූටි බබෝ...</p>
+    <p class="sin">මේක ඔයා වෙනුවෙන්මයි.</p>
+    <button class="btn glass ripple" id="open">Open My Heart ♡</button>
+  </div>
+</section>
+
+<!-- 2 · POLAROID (photo2, blurred photo3 behind) -->
+<section id="us" class="scene us" data-scene="1" data-nav="home">
+  <div class="polaroid" style="--r:-4deg"><div data-speed="0.07"><img src="./images/photo2.jpeg" alt=""><em>a tiny world, only for you</em></div></div>
+  <span class="tape"></span>
+</section>
+
+<!-- 3 · LOVE LETTER + MUSIC -->
+<section id="letter" class="scene letter" data-scene="2" data-nav="letter">
+  <article class="paper reveal" id="paper">
+    <div class="glow"></div>
+    <svg class="corner c1" viewBox="0 0 24 22"><use href="#heart"/></svg>
+    <svg class="corner c2" viewBox="0 0 24 22"><use href="#heart"/></svg>
+    <div class="petals" id="petals"></div>
+    <p class="write">මගෙ චූටි බබෝ,</p>
+    <p class="write">මම මගේ මැණික එක්ක හැමදාම ඉන්නව හැමදාම බය වෙන්න එපා ඒකට. නැති කර ගන්නෙ නෑ කවදාවත් හැමදාම මේ වගේ ආදරෙන් ඉමු.</p>
+    <p class="write">මන් මගේ මගේ චූටි බබාට ගොඩාක්ම ගොඩක් ආදරෙයි</p>
+    <p class="sign">Forever yours, Samadhi <svg class="hh" viewBox="0 0 24 22"><use href="#heart"/></svg></p>
+  </article>
+
+  <div class="player glass reveal" id="player">
+    <h2 class="ptitle">🎵 Our Little Songs</h2>
+    <div class="now">
+      <img id="art" class="art" src="./images/photo1.jpeg" alt="">
+      <div class="meta">
+        <strong id="songName">Song 1</strong>
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Progress">
+    <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+    <div class="ctrl">
+      <button id="prev" aria-label="Previous">⏮</button>
+      <button id="play" class="pp" aria-label="Play">▶</button>
+      <button id="next" aria-label="Next">⏭</button>
+      <label class="vol">🔉<input id="vol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume"></label>
+    </div>
+    <div class="songs" id="songs"></div>
+  </div>
+</section>
+
+<!-- 4 · MEMORY CARD (photo4) -->
+<section id="memories" class="scene mem" data-scene="3" data-nav="memories">
+  <div class="memcard glass reveal">
+    <div class="frame"><img src="./images/photo4.jpeg" alt=""></div>
+    <p class="cap">Samadhi ♡</p>
+  </div>
+</section>
+
+<!-- 5 · CINEMATIC PHOTO (photo5) + hidden heart -->
+<section id="cine" class="scene cine" data-scene="4" data-nav="memories">
+  <div class="wide reveal"><img data-speed="0.08" src="./images/photo5.jpeg" alt=""></div>
+  <!-- SECRET: tiny glowing heart. Move it anywhere by editing .secret in style.css -->
+  <button id="secret" class="secret" aria-label="?"><svg viewBox="0 0 24 22"><use href="#heart"/></svg></button>
+</section>
+
+<!-- 6 · GAMES -->
+<section id="games" class="scene games" data-scene="5" data-nav="games">
+  <h2 class="h2 sin">ඔයාට සෙල්ලම් කරන්න ♡</h2>
+  <div class="gamegrid" id="gamegrid">
+    <button class="gcard glass" data-game="draw"><i class="ico">🎨</i><h3>Draw For Me</h3><p class="sin">Samadhi, මට මොනවහරි ඇඳලා දෙන්න ❤️</p></button>
+    <button class="gcard glass" data-game="catch"><i class="ico">💗</i><h3>Catch My Hearts</h3><p class="sin">මගේ hearts ටික අල්ලගන්න...</p></button>
+    <button class="gcard glass" data-game="memory"><i class="ico">🧩</i><h3>Love Memory</h3><p class="sin">අපේ hearts හොයාගන්න...</p></button>
+  </div>
+
+  <!-- Drawing -->
+  <div class="stage glass" id="g-draw">
+    <button class="back" data-back>‹ back</button>
+    <h3 class="sin">Samadhi, මට මොනවහරි ඇඳලා දෙන්න ❤️</h3>
+    <div class="tools">
+      <button data-tool="pen" class="on">✎ Pen</button><button data-tool="eraser">⌫ Eraser</button>
+      <button id="undo">↶ Undo</button><button id="clear">✕ Clear</button><button id="save">⤓ Save</button>
+    </div>
+    <div class="swatches" id="swatches"></div>
+    <div class="pad"><canvas id="pad"></canvas></div>
+    <p class="sin drawmsg" id="drawMsg"></p>
+  </div>
+
+  <!-- Heart catching -->
+  <div class="stage glass" id="g-catch">
+    <button class="back" data-back>‹ back</button>
+    <h3 class="sin">Catch My Hearts ♡ <small id="score">0 / 12</small></h3>
+    <div class="arena" id="arena"><p class="sin toast" id="toast"></p></div>
+    <div class="endcard sin" id="catchEnd" hidden><p>ඔයා මගේ hearts ඔක්කොම අල්ලගත්තා ❤️</p><p>ඒත් මගේ මුළු හදවතම දැනටමත් ඔයාගේ.</p><button class="btn glass" id="again">Play again ♡</button></div>
+  </div>
+
+  <!-- Memory match -->
+  <div class="stage glass" id="g-memory">
+    <button class="back" data-back>‹ back</button>
+    <h3 class="sin">Love Memory <small id="moves"></small></h3>
+    <div class="deck" id="deck"></div>
+    <div class="endcard sin" id="memEnd" hidden><p>You found them all ❤️</p><p>හැබැයි මගේ හදවත හොයාගන්න ඔයාට game එකක් ඕන නෑ.</p><button class="btn glass" id="memAgain">Play again ♡</button></div>
+  </div>
+</section>
+
+<!-- 7 · FINAL (photo6) -->
+<section id="surprise" class="scene final" data-scene="6" data-nav="surprise">
+  <div class="fphoto"><img data-speed="0.05" src="./images/photo6.jpeg" alt=""></div>
+  <div class="lines sin">
+    <p class="fl">Samadhi...</p>
+    <p class="fl">මගෙ චූටි බබෝ...</p>
+    <p class="fl">මන් ඔයාට ගොඩාක්ම ගොඩක් ආදරෙයි. ❤️</p>
+    <h2 class="fl ily">I LOVE YOU</h2>
+    <p class="fl">හැමදාම මේ වගේ ආදරෙන් ඉමු. ❤️</p>
+  </div>
+</section>
+</main>
+
+<!-- Secret modal -->
+<div class="modal" id="modal" hidden><div class="mbox glass sin">
+  <p id="m1">අඩේ Samadhi මේකත් හොයාගත්තද? 😂❤️</p>
+  <p id="m2" class="hide2">මට හිතෙන්නෙ ඔයාට මගේ website එකට වඩා මාව හොඳට හොයාගන්න පුළුවන් වගේ. 🥹❤️</p>
+  <button class="btn glass" id="mClose">♡</button>
+</div></div>
+
+<!-- Reusable heart shape -->
+<svg width="0" height="0" style="position:absolute"><symbol id="heart" viewBox="0 0 24 22"><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1.5A5.5 5.5 0 0 1 23 7c0 4.500-4 8-11 14z" fill="currentColor"/></symbol></svg>
+
+<script src="script.js"></script>
+</body>
+</html>
